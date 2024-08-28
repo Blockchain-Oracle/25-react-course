@@ -1,0 +1,94 @@
+.movie-app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.loading-container {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #646cff;
+    margin-top: 2rem;
+}
+
+.no-movie-found {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f44336;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .movie-app-container {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .movie-app-container {
+        padding: 1.5rem;
+    }
+
+    .movie-card-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .movie-app-container {
+        padding: 1rem;
+    }
+
+    .movie-card-container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+
+    .loading-container,
+    .no-movie-found {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .movie-app-container {
+        padding: 0.8rem;
+    }
+
+    .movie-card-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .loading-container,
+    .no-movie-found {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .movie-app-container {
+        padding: 0.6rem;
+    }
+
+    .movie-card-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.6rem;
+    }
+
+    .loading-container,
+    .no-movie-found {
+        font-size: 0.9rem;
+    }
+}

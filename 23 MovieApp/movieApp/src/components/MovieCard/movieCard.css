@@ -1,0 +1,238 @@
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #141414;
+}
+
+.movie-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.movie-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay {
+    opacity: 1;
+}
+
+.movie-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.movie-rating,
+.movie-year {
+    font-size: 0.8rem;
+}
+
+.movie-overview {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.movie-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-action {
+    padding: 0.4rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-watchlist {
+    background-color: #e50914;
+    color: white;
+}
+
+.btn-watched {
+    background-color: #564d4d;
+    color: white;
+}
+
+.btn-watchlist:hover,
+.btn-watched:hover {
+    opacity: 0.8;
+}
+
+.loading-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #e50914;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.no-movie-found {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 0.9rem;
+        padding: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem;
+    }
+
+    .movie-title {
+        font-size: 1rem;
+    }
+
+    .movie-rating,
+    .movie-year,
+    .movie-overview,
+    .btn-action {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.7rem;
+        padding: 1.2rem;
+    }
+
+    .movie-title {
+        font-size: 0.9rem;
+    }
+
+    .movie-rating,
+    .movie-year,
+    .movie-overview,
+    .btn-action {
+        font-size: 0.7rem;
+    }
+
+    .btn-action {
+        padding: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.6rem;
+        padding: 1rem;
+    }
+
+    .movie-title {
+        font-size: 0.8rem;
+    }
+
+    .movie-rating,
+    .movie-year,
+    .movie-overview,
+    .btn-action {
+        font-size: 0.65rem;
+    }
+
+    .btn-action {
+        padding: 0.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 0.5rem;
+        padding: 0.8rem;
+    }
+
+    .movie-title {
+        font-size: 0.75rem;
+    }
+
+    .movie-rating,
+    .movie-year,
+    .movie-overview,
+    .btn-action {
+        font-size: 0.6rem;
+    }
+
+    .btn-action {
+        padding: 0.2rem;
+    }
+}

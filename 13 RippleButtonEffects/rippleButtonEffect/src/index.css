@@ -1,0 +1,61 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+h1,
+h2 {
+  color: #2c3e50;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+
+  h1,
+  h2 {
+    color: #ecf0f1;
+  }
+}
+
+.background-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: background-ripple 1s ease-out;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+@keyframes background-ripple {
+  to {
+    transform: scale(20);
+    opacity: 0;
+  }
+}

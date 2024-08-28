@@ -1,0 +1,121 @@
+.header {
+    background-color: #141414;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: #e50914;
+    margin-right: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.logo:hover .logo-icon,
+.logo:hover .logo-text {
+    color: #f40612;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-content {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        padding: 0.9rem;
+    }
+
+    .logo-icon {
+        font-size: 1.9rem;
+    }
+
+    .logo-text {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        justify-content: center;
+    }
+
+    .logo-icon {
+        font-size: 1.7rem;
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 0.7rem;
+    }
+
+    .logo-icon {
+        font-size: 1.5rem;
+        margin-right: 0.4rem;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 0.6rem;
+    }
+
+    .logo-icon {
+        font-size: 1.3rem;
+        margin-right: 0.3rem;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        padding: 0.5rem;
+    }
+
+    .logo-icon {
+
+        font-size: 1.1rem;
+        margin-right: 0.2rem;
+    }
+
+    .logo-text {
+        font-size: 0.8rem;
+    }
+}

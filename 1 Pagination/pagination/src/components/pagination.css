@@ -1,0 +1,39 @@
+button:disabled {
+    cursor: not-allowed;
+}
+
+.listItems {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+    max-width: 500px;
+    padding: 0;
+    margin: 20px auto;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.listItems li {
+    padding: 12px;
+    background-color: darkslategrey;
+    border-radius: 10px;
+}
+
+.pagination-btn {
+    /* height: 6em;
+  padding: 1.5em; */
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.pagination-btn:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.pagination-btn.active {
+    background-color: gray;
+}
+
+.pagination-btn.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}

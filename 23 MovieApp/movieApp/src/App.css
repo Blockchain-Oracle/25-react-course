@@ -1,0 +1,10 @@
+body {
+  background-color: #141414;
+  color: white;
+}
+
+.app-container {
+
+  align-items: center;
+  min-height: 100vh;
+}

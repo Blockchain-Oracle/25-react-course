@@ -1,0 +1,39 @@
+:root {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-mode {
+  color: #ffffff;
+  background-color: #1a1a1a;
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.dark-mode .app-container {
+  background-color: #1a1a1a;
+}

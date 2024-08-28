@@ -1,0 +1,25 @@
+/* Styles for the DigitalClock component in DigitalClock.jsx */
+.digital-clock {
+    text-align: center;
+    font-family: 'Digital-7', Arial, sans-serif;
+    background-color: black;
+    color: lime;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.clock span {
+    margin: 0 10px;
+}
+
+.digital-clock span:nth-child(3) {
+    font-size: 0.5em;
+}

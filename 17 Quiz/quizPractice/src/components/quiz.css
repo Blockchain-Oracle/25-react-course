@@ -1,0 +1,213 @@
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-container.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    color: #333;
+}
+
+.dark-mode .dark-mode-toggle {
+    color: #fff;
+}
+
+.quiz-question-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .quiz-question-container {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.quiz-question h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.dark-mode .quiz-question h3 {
+    color: #ecf0f1;
+}
+
+.quiz-question p {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.dark-mode .quiz-question p {
+    color: #bdc3c7;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    background-color: #ecf0f1;
+    border: 2px solid #3498db;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: 500;
+    text-align: left;
+}
+
+.dark-mode .option {
+    background-color: #34495e;
+    border-color: #3498db;
+    color: #ecf0f1;
+}
+
+.option:hover,
+.option.selected {
+    background-color: #3498db;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.prev-btn,
+.next-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.dark-mode .prev-btn,
+.dark-mode .next-btn {
+    background-color: #27ae60;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(46, 204, 113, 0.3);
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.dark-mode .prev-btn:disabled,
+.dark-mode .next-btn:disabled {
+    background-color: #7f8c8d;
+}
+
+.quiz-completed {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .quiz-completed {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.quiz-completed h3 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.dark-mode .quiz-completed h3 {
+    color: #ecf0f1;
+}
+
+.quiz-completed p {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.dark-mode .quiz-completed p {
+    color: #bdc3c7;
+}
+
+.restart-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.restart-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quiz-question-container,
+.quiz-completed {
+    animation: fadeIn 0.5s ease-out;
+}

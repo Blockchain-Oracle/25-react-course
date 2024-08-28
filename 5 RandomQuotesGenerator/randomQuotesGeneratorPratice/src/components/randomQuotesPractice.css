@@ -1,0 +1,47 @@
+/* @RandomQoutesGeneratorPractice.jsx */
+.quotesWrapper {
+    padding: 2em;
+    border: 2px solid #4CAF50;
+    margin: 2em 0;
+    text-align: center;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+button {
+    padding: 0.75em 1.5em;
+    margin-top: 1.5em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #f9f9f9;
+}
+
+p {
+    font-size: 1.25em;
+    color: #ccc;
+    margin: 0.5em 0;
+}
+
+.quoteContent {
+    font-style: italic;
+}
+
+.quoteAuthor {
+    font-weight: bold;
+    text-align: right;
+}

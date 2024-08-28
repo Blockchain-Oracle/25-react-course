@@ -1,0 +1,46 @@
+/* Dark mode styles for ripple effects */
+.ripple-button-container {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.ripple-button {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.ripple-button:hover {
+    background-color: #444444;
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(0);
+    animation: ripple 0.8s ease-out;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}

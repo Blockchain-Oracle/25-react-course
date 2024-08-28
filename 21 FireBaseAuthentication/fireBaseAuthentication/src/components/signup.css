@@ -1,0 +1,53 @@
+.signupContainer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.signupForm label {
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.inputField {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.error {
+    color: var(--color-error);
+    margin-bottom: 1rem;
+}
+
+.submitButton {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.submitButton:hover {
+    background-color: var(--color-primary-hover);
+}

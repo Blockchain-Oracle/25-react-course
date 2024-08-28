@@ -1,0 +1,47 @@
+Dark mode styles body {
+  background-color: #141414;
+  color: #ffffff;
+}
+
+.app-container {
+  background-color: #141414;
+}
+
+.main-content {
+  background-color: #141414;
+}
+
+/* Adjust text colors for better contrast */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+}
+
+p,
+span,
+div {
+  color: #e0e0e0;
+}
+
+/* Adjust link colors */
+a {
+  color: #bb86fc;
+}
+
+a:hover {
+  color: #3700b3;
+}
+
+/* Adjust button styles */
+button {
+  background-color: #3700b3;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #6200ee;
+}

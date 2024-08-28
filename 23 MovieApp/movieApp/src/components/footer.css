@@ -1,0 +1,92 @@
+.footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 1rem 0;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer nav li {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer nav a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* Add padding to the body to prevent content from being hidden behind the footer */
+body {
+    padding-bottom: 60px;
+    /* Adjust this value based on your footer's height */
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer nav ul {
+        margin-top: 1rem;
+    }
+
+    .footer nav li {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 0.8rem 0;
+    }
+
+    .footer-content {
+        padding: 0 0.8rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    .footer nav a {
+        font-size: 0.8rem;
+    }
+
+    body {
+        padding-bottom: 80px;
+    }
+}

@@ -1,0 +1,137 @@
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.quiz-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.quiz-wrapper {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-ended-container {
+    text-align: center;
+}
+
+.restart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.curent-quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-number {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.quiz-question-container {
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.option-btn:hover {
+    background-color: #d0d0d0;
+}
+
+.option-btn.selected {
+    background-color: #2196F3;
+    color: white;
+}
+
+.prev-next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.prev-btn,
+.next-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+}
+
+.pagination-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination-btn {
+    background-color: #e0e0e0;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.pagination-btn:hover {
+    background-color: #d0d0d0;
+}
+
+.pagination-btn.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.pagination-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}

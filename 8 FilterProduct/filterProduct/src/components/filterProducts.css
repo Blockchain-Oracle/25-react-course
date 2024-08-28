@@ -1,0 +1,129 @@
+.filter-products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.filter-products-header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.filter-products-categories {
+    margin-bottom: 30px;
+}
+
+.filter-products-categories h2 {
+    font-size: 1.8em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.filter-products-category {
+    margin: 5px;
+    padding: 8px 16px;
+    font-size: 1em;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.filter-products-category:hover,
+.filter-products-category.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.filter-products-list ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.filter-products-item {
+    list-style: none;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-products-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.filter-products-item p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.filter-products-item button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.filter-products-item button:hover {
+    background-color: #2980b9;
+}
+
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .filter-products-item {
+        background-color: #444;
+    }
+
+    .filter-products-item p {
+        color: #ecf0f1;
+    }
+
+    .filter-products-category {
+        background-color: #555;
+        color: #ecf0f1;
+    }
+
+    .spinner {
+        border-color: rgba(255, 255, 255, 0.1);
+        border-left-color: #3498db;
+    }
+}
